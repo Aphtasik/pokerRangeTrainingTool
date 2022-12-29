@@ -48,10 +48,8 @@ def parseRange(input_string: str):
 
 
 def showHand(card1, card2):
-    image1 = plt.imread('../cards/card_' + card1 + '.png')
-    image2 = plt.imread('../cards/card_' + card2 + '.png')
-
-    plt.clf()
+    image1 = plt.imread('cards/card_' + card1 + '.png')
+    image2 = plt.imread('cards/card_' + card2 + '.png')
 
     fig, (ax1, ax2) = plt.subplots(1, 2)
 
@@ -60,23 +58,27 @@ def showHand(card1, card2):
     plt.draw()
 
 
-def result(isOpened, randomCards, openingRange):
+def result(randomCards, openingRange):
     global correct, error
-    if isOpened == 'y':
-        if randomCards in openingRange:
-            correct += 1
+    retry = True
+    while retry:
+        retry = False
+        isOpened = input("Is " + randomCards + " in your range? (y/n): ")
+        if isOpened == 'y':
+            if randomCards in openingRange:
+                correct += 1
+            else:
+                error += 1
+                print("Error: " + randomCards + " is not in your range")
+        elif isOpened == 'n':
+            if randomCards in openingRange:
+                error += 1
+                print("Error: " + randomCards + " is in your range")
+            else:
+                correct += 1
         else:
-            error += 1
-            print("Error: " + randomCards + " is not in your range")
-    elif isOpened == 'n':
-        if randomCards in openingRange:
-            error += 1
-            print("Error: " + randomCards + " is in your range")
-        else:
-            correct += 1
-    else:
-        print("Invalid input ! Use y/n")
-        result(isOpened, randomCards, openingRange)
+            print("Invalid input ! Use y/n")
+            retry = True
 
 
 def main():
@@ -94,8 +96,7 @@ def main():
     for _ in range(int(numberOfHands)):
         randomCards = randomHand()
         showHand(randomCards[0], randomCards[1])
-        isOpened = input("Is this hand in your range? (y/n): ")
-        result(isOpened, randomCards[2], openingRange)
+        result(randomCards[2], openingRange)
 
     print("Congratulations!")
     print("Total Hands: " + numberOfHands)
