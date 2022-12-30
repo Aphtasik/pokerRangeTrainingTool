@@ -27,7 +27,6 @@ allPossibleHands = getAllPossibleHands()
 
 ### Functions
 
-
 def randomHand():
     card1 = card2 = ""
 

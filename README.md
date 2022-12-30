@@ -3,7 +3,7 @@ Minimalistic python tool for training your poker ranges. Enter a range and test 
 
 ## Requirement
 - python3
-- matplotlib (install with "pip install matplotlib")
+- pip install -r requirements.txt
 
 ## Usage
 - Start the script with "python3 src/app.py" from the root folder of the project 
