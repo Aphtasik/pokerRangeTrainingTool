@@ -1,7 +1,7 @@
 import random
 import matplotlib.pyplot as plt
 
-### Global variables
+# ---Global variables---
 
 ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
 colors = ["h", "d", "c", "s"]
@@ -25,7 +25,8 @@ def getAllPossibleHands():
 
 allPossibleHands = getAllPossibleHands()
 
-### Functions
+# ---Functions---
+
 
 def randomHand():
     card1 = card2 = ""
