@@ -15,4 +15,5 @@ Minimalistic python tool for training your poker ranges. Enter a range and test 
 ## TODO:
 - quit option by pressing q
 - more Format accepted
-- do not open a new window every time
+- do not open a new window every time, but update the opened one
+- app web
