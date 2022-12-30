@@ -79,6 +79,7 @@ def result(randomCards, openingRange):
         else:
             print("Invalid input ! Use y/n")
             retry = True
+    plt.close()
 
 
 def main():
