@@ -11,7 +11,4 @@ def status():
 
 @app.get("/v1/hand")
 def get_hand():
-    
-
     return {}
-
