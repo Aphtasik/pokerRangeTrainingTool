@@ -13,6 +13,8 @@ Minimalistic python tool for training your poker ranges. Enter a range and test 
 - See your result
 
 ## Run API
+
+You can launch the api with this command :
 ```sh
 uvicorn src.api:app
 ```
