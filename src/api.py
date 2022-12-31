@@ -12,4 +12,4 @@ def status():
 @app.get("/v1/hand")
 def get_hand():
     cards = Deck()
-    return {"hand": cards.get_hand()}
+    return {"hand": cards.get_hand(), "representation": cards.get_hand_str()}
