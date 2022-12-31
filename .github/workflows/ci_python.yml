@@ -20,10 +20,7 @@ jobs:
         run: |
           flake8 .
 
-      - name: Export Python Path
-        run: |
-          export "PYTHONPATH=."
-
       - name: Run testsuit
         run: |
+          export PYTHONPATH=.
           pytest
