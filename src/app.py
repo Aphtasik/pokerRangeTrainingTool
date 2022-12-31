@@ -15,11 +15,9 @@ def getAllPossibleHands():
     for i in range(0, 13):
         for j in range(i, 13):
             if i == j:
-                print(ranks[i] + ranks[j])
                 L.append(ranks[i] + ranks[j])
             else:
                 for k in range(0, 2):
-                    print(ranks[i] + ranks[j] + suited[k])
                     L.append(ranks[i] + ranks[j] + suited[k])
 
 
@@ -96,10 +94,14 @@ def result(randomCards, openingRange):
                 print("Error: " + randomCards + " is in your range")
             else:
                 correct += 1
+        elif isOpened == "q":
+            plt.close()
+            return 1
         else:
             print("Invalid input ! Use y/n")
             retry = True
     plt.close()
+    return 0
 
 
 def main():
@@ -117,7 +119,9 @@ def main():
     for _ in range(int(numberOfHands)):
         randomCards = randomHand()
         showHand(randomCards[0], randomCards[1])
-        result(randomCards[2], openingRange)
+        res = result(randomCards[2], openingRange)
+        if res == 1:
+            break
 
     print("Congratulations!")
     print("Total Hands: " + numberOfHands)
