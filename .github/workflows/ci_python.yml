@@ -17,8 +17,9 @@ jobs:
       - name: Run flake8
         run: |
           python -m flake8 .
-
-      - name: Run testsuite
+      - name: Build api
         run: |
           uvicorn src.api:app
+      - name: Run testsuite
+        run: |
           pytest
