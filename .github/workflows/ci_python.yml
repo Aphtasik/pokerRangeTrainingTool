@@ -22,8 +22,8 @@ jobs:
 
       - name: Export Python Path
         run: |
-          export "PYTHONPATH='.'"
-          
+          export "PYTHONPATH=."
+
       - name: Run testsuit
         run: |
           pytest
