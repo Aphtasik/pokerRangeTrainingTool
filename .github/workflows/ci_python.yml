@@ -20,9 +20,6 @@ jobs:
       - name: Build api
         run: |
           uvicorn src.api:app
-      - name: Run testsuite
-        run: |
-          pytest
 
   test:
     name: Test project
