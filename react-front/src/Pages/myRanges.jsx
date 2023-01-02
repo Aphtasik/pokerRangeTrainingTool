@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-class MyRangesPage extends Component {
-    state = {  } 
+class MyRanges extends Component {
     render() { 
         return (
             <h1>My Ranges</h1>
@@ -9,4 +8,4 @@ class MyRangesPage extends Component {
     }
 }
  
-export default MyRangesPage
+export default MyRanges

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Components/navbar';
+import MyRanges from './Pages/myRanges';
+import TrainRanges from './Pages/trainRanges';
+import TrainHands from './Pages/trainHands';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Navbar />
+
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<MyRanges />} />
+                    <Route path="/my-ranges" element={<MyRanges />} />
+                    <Route path="/train-ranges" element={<TrainRanges />} />
+                    <Route path="/train-hands" element={<TrainHands />} />
+                </Routes>
+            </div>
+        </>
+    )
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class TrainHandsPage extends Component {
+class TrainHands extends Component {
     render() { 
         return (
             <h1>Train Hands</h1>
@@ -8,4 +8,4 @@ class TrainHandsPage extends Component {
     }
 }
  
-export default TrainHandsPage;
+export default TrainHands;

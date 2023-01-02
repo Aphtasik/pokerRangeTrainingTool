@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TrainRangesPage extends Component {
+class TrainRanges extends Component {
     render() { 
         return (
             <h1>Train Ranges</h1>
@@ -8,4 +8,4 @@ class TrainRangesPage extends Component {
     }
 }
  
-export default TrainRangesPage;
+export default TrainRanges;
