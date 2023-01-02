@@ -1,4 +1,4 @@
-import Navbar from './Components/navbar';
+import Navbar from './components/navbar';
 import MyRanges from './Pages/myRanges';
 import TrainRanges from './Pages/trainRanges';
 import TrainHands from './Pages/trainHands';
