@@ -104,16 +104,35 @@ def result(randomCards, openingRange):
     return 0
 
 
-def main():
-    openingRange = parseRange(input("Enter a range (Flopzilla format): "))
+def parseInput():
+    print("Enter the number corresponding to the type of range you want as input: ")
+    print("1. Flopzilla/Equilab format")
+    print("2. PioSolver/HRC/GTO+/SimplePF format")
+    formatType = input("Your choice: ")
+    if (formatType != "1" and formatType != "2"):
+        print("Invalid choice")
+        exit()
+
+    openingRange = input("Enter a range with the choosen format: ")
     if len(openingRange) == 0:
         print("Invalid range")
-        return
+        exit()
+
+    if formatType == "1":
+        openingRange = parseRange(openingRange)
+    else:
+        openingRange = openingRange.split(",")
 
     numberOfHands = input("Enter number of hands to play: ")
     if not numberOfHands.isdigit() or int(numberOfHands) <= 0:
         print("Invalid number")
-        return
+        exit()
+
+    return openingRange, numberOfHands
+
+
+def main():
+    (openingRange, numberOfHands) = parseInput()
 
     plt.ion()
     for _ in range(int(numberOfHands)):

@@ -7,7 +7,8 @@ Minimalistic python tool for training your poker ranges. Enter a range and test 
 
 ## Usage
 - Start the script with "python3 src/app.py" from the root folder of the project 
-- Enter the range to work on (in a Flopzilla Format)
+- Enter the type of range
+- Enter the range 
 - Enter the number of hands to work on
 - Hands will appear, just press 'y' or 'n' for yes/no to indicate if the hand showing on screen is within your range or not/ or 'q' to quit
 - See your result
